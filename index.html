@@ -127,18 +127,9 @@ function animate() {
   requestAnimationFrame(animate);
   }
 
-// ===== VIEW COUNTER =====
-// Zmień nazwę "twoj-nick/heart" na coś unikalnego
-fetch("https://api.countapi.xyz/hit/twoj-nick-heart/visits")
-  .then(res => res.json())
-  .then(data => {
-    const el = document.getElementById("counter");
-    if (el) el.textContent = `Otworzenia: ${data.value}`;
-  })
-  .catch(() => {
-    const el = document.getElementById("counter");
-    if (el) el.textContent = "Otworzenia: —";
-  });
+// ===== VIEW COUNTER (hidden) =====
+fetch("https://api.countapi.xyz/hit/nozos1-serce/visits")
+  .catch(() => {});
 
 
 
